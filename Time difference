@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int hour1 = sc.nextInt();
+        int min1 = sc.nextInt();
+        int sec1 = sc.nextInt();
+
+        int hour2 = sc.nextInt();
+        int min2 = sc.nextInt();
+        int sec2 = sc.nextInt();
+
+        int date1 = hour1 * 60 * 60 + min1 * 60 + sec1;
+        int date2 = hour2 * 60 * 60 + min2 * 60 + sec2;
+
+        System.out.println(date2 - date1);
+
+
+    }
+}

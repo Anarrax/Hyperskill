@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        // Example input is 7
+        // If the number is even, add two. If the number is odd, add one
+        int nextEven = n + (2 - n % 2); // 7 + (2 - 7 % 2) -> 7 + (2 - 1) -> 7 + 1 = 8
+
+        System.out.println(nextEven); // Prints 8
+    }
+}

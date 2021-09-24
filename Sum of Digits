@@ -4,17 +4,17 @@ class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int threeDigitNumber = sc.nextInt();
+        int threeDigitNumber = sc.nextInt(); // Example number is 476
 
-        int sumOfDigits = threeDigitNumber / 100
-                + threeDigitNumber % 100 / 10
-                + threeDigitNumber % 10;
+        int sumOfDigits = threeDigitNumber / 100 // 4.76 but Java reads as 4
+                + threeDigitNumber % 100 / 10 // 100 goes into 476 4 times with 76 remaining, 76 / 10 is 7 in Java
+                + threeDigitNumber % 10; // 10 goes into 476 with 6 remaining in Java
 
-        System.out.println(sumOfDigits);
+        System.out.println(sumOfDigits); // 4 + 7 + 6 = 17
     }
 }
 
-//Cleaner version
+// Cleaner version
 
 import java.util.Scanner;
 

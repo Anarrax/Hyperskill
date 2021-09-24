@@ -1,0 +1,20 @@
+/* Snail creeps up the vertical pole of height H feet. It goes A feet up per day, and B feet down per night. In which day will the snail reach the top of the pole?
+
+On the input the program receives non-negative integers H, A, B, where H > B and A > B. Every integer does not exceed 100. */
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int h = sc.nextInt(); // Vertical pole height
+        int a = sc.nextInt(); // Feet up per day
+        int b = sc.nextInt(); // Feet down per night
+
+        int day = (h - a) / (a - b) + ((a - b) - 1
+                   + (h - a) % (a - b)) / (a - b) + 1;
+
+        System.out.println(day);
+    }
+}

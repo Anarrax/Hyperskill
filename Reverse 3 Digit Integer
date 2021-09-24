@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        
+        // Example number is 976
+        int num1 = n / 100; // Java calculates 9
+        int num2 = (n % 100) / 10; // 100 goes into 976 9 times with 76 remaining. 76 / 10 is 7 in Java
+        int num3 = n % 10; // 10 goes into 976 97 times with 6 remaining
+
+        System.out.println(num1 + num2 * 10 + num3 * 100); // 9 + (7 * 10) + (6 * 100) = 679
+    }
+}

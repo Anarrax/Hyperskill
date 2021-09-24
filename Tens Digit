@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int tensDigit = n / 10 % 10; // Divides number by 10, then finds the remainder of that number after being divided by 10
+
+        System.out.println(tensDigit);
+    }
+}

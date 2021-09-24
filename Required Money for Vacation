@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int vacationDays = sc.nextInt();
+        int foodCost = sc.nextInt();
+        int oneFlightCost = sc.nextInt();
+        int hotelCost = sc.nextInt();
+
+        int requiredSum = foodCost * vacationDays
+                + oneFlightCost * 2 // Cost of the flight + the flight to return home
+                + hotelCost * (vacationDays - 1); // Cost of hotel for each day, -1 for the day you leave
+
+        System.out.println(requiredSum);
+    }
+}

@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.nextLine().replace(" ", ""); // Removes whitespace
+        String str2 = sc.nextLine().replace(" ", ""); // Removes whitespace
+        System.out.println(str1.equals(str2)); // Checks if string is = to string, returns Boolean value
+    }
+}

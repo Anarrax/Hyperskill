@@ -1,0 +1,22 @@
+/* A successful groundhog party will have between 10 and 20 Reese's peanut butter cups, inclusive, unless it is the weekend, 
+in which case they will need 15 to 25 Reese's peanut butter cups, inclusive.
+
+Write a Java program that reads two values:
+
+the first is the number of Reese's peanut butter cups;
+the second is a boolean representing whether it is the weekend.
+The program must print a boolean value that indicates whether the party was successful. */
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cups = sc.nextInt(); // 16
+        boolean isWeekend = sc.nextBoolean(); // false
+
+        boolean weekday = cups >= 10 && cups <= 20 && !isWeekend;
+        boolean weekend = cups >= 15 && cups <= 25 && isWeekend;
+        System.out.println(weekday || weekend); // true
+    }
+}

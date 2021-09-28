@@ -1,0 +1,30 @@
+/* Imagine a chocolate bar. Remember how it is usually split into smaller bits by a special grid?
+
+Now think of chocolate as an N x M rectangle divided into little segments: N segments in length and M in width. Each segment is 1x1 and unbreakable. 
+Find out whether it is possible to break off exactly K segments from the chocolate with a single straight line: vertical or horizontal.
+
+Input data format
+The program gets an input of three integers: N, M, K.
+
+Output data format
+The program must output one of the two words: YES or NO. */
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // length
+        int m = sc.nextInt(); // width
+        int k = sc.nextInt(); // pieces
+        
+        // pieces % length == 0 and piece / length < width OR
+        // pieces % width == 0 and piece / width is < length
+        if (k % n == 0 && k / n < m || k % m == 0 && k / m < n) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}

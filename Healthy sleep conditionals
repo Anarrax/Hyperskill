@@ -1,0 +1,26 @@
+/* You are given three numbers: A, B and H. According to TV, one should sleep at least A hours per day, but no more than B hours. 
+H is how many hours Ann sleeps.
+
+Task: If Ann sleeps less then A hours, print "Deficiency". If she sleeps more than B hours, print "Excess".
+If her sleep fits the recommendations, print "Normal".
+
+Input format: three numbers A, B, H, where A is always less than or equal to B. */
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt(); // 7
+        int b = sc.nextInt(); // 9
+        int h = sc.nextInt(); // 2
+
+        if (h < a) {
+            System.out.println("Deficiency"); // Prints this
+        } else if (h > b) {
+            System.out.println("Excess");
+        } else {
+            System.out.println("Normal");
+        }
+    }
+}

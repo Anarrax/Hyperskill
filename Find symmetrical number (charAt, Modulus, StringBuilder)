@@ -1,0 +1,58 @@
+/* Given a four-digit number. Determine whether its decimal notation is symmetric. 
+If the number is symmetric, output 1; otherwise output any other integer. */
+
+// My charAt() method:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String myStr = sc.nextLine();
+        char first = myStr.charAt(0);
+        char second = myStr.charAt(1);
+        char third = myStr.charAt(2);
+        char fourth = myStr.charAt(3);
+
+        if (first == fourth && second == third) {
+            System.out.println("1");
+        } else {
+            System.out.println("2");
+        }
+    }
+}
+
+
+// Modulus method:
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        
+        int a = number % 10;
+        int b = (number / 10) % 10;
+        int c = (number / 100) % 10;
+        int d = number / 1000;
+        
+        if (a == d && b == c) {
+            System.out.println(1);
+        } else {
+            System.out.println(2);
+        }
+    }
+}
+
+
+// StringBuilder method:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        String s = new Scanner(System.in).nextLine();
+        String r = new StringBuilder(s).reverse().toString();
+        System.out.println(s.equals(r) ? "1" : "2"); // boolean statement ? true result : false result;
+    }
+}
